@@ -1,13 +1,14 @@
-{% extends 'materias/base.html' %}
+{% extends 'base.html' %}
 
 {% block content %}
-{% for materia in materias %}
-    <p>{{ materia.categoria }}</p>
-    <p>{{ materia.pessoa }}</p>
-    <p>{{ materia.titulo }}</p>
-    <p>{{ materia.subtitulo }}</p>
-    <p>{{ materia.texto }}</p>
-    <p>{{ materia.data_criacao }}</p>
-    <hr>
-{% endfor %}
+    <h1 class="pb-3 text-center">{{ titulo_pagina }}</h1>
+    {% for materia in materias %}
+        <h5>{{ materia.categoria }}</h5>
+        <h2>{{ materia.titulo }}</h2>
+        <h4>{{ materia.subtitulo }}</h4>
+        <blockquote>{{ materia.texto }}</blockquote>
+        <p><strong>Autor: </strong>{{ materia.pessoa }}</p>
+        <p><strong>Lançamento da publicação: </strong>{{ materia.data_criacao }}</p>
+        <hr>
+    {% endfor %}
 {% endblock content %}

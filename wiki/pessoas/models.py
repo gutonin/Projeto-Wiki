@@ -11,7 +11,7 @@ class Pessoa(models.Model):
     redator = models.CharField(max_length=100)
     data_de_inicio = models.DateField(default=timezone.now)
     email = models.CharField(max_length=254)
-    usuario = models.ForeignKey('auth.User', on_delete=models.CASCADE)
+    usuario = models.ForeignKey('auth.User', on_delete=models.CASCADE, related_name='usuario')
 
     def __str__(self):
         return self.redator
