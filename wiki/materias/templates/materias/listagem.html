@@ -1,0 +1,13 @@
+{% extends 'materias/base.html' %}
+
+{% block content %}
+{% for materia in materias %}
+    <p>{{ materia.categoria }}</p>
+    <p>{{ materia.pessoa }}</p>
+    <p>{{ materia.titulo }}</p>
+    <p>{{ materia.subtitulo }}</p>
+    <p>{{ materia.texto }}</p>
+    <p>{{ materia.data_criacao }}</p>
+    <hr>
+{% endfor %}
+{% endblock content %}
