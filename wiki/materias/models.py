@@ -2,7 +2,6 @@
 from __future__ import unicode_literals
 from django.db import models
 from pessoas.models import Pessoa
-from django.utils.timezone import now
 from django.utils import timezone
 
 

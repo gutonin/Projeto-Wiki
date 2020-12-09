@@ -9,4 +9,4 @@ def listagem(request):
     context={
         'materias':materias,
     }
-    return render(request, 'materias/listagem.html', context)
+    return render(request, 'listagem.html', context)
