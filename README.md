@@ -5,7 +5,7 @@ git clone https://github.com/gutonin/projeto-wiki
 cd projeto-wiki
 
 virtualenv:
-virtualenv venv -p python3
+virtualenv venv
 
 Linux:
 source env/bin/activate
