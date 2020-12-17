@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1 class="display-4 text-center">{{ titulo_pagina }}</h1>
+    <h5>{{ materia.categoria }}</h5>
+    <h2><a href=" {% url 'detalhe_materia' pk=materia.pk %}">{{ materia.titulo }}</a></h2>
+    <h4>{{ materia.subtitulo }}</h4>
+    <blockquote>{{ materia.texto }}</blockquote>
+    <p><strong>Autor: </strong>{{ materia.pessoa }}</p>
+    <p><strong>Lançamento da publicação: </strong>{{ materia.data_criacao }}</p>
+{% endblock content %}
