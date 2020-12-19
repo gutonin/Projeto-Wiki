@@ -2,6 +2,11 @@
 
 {% block content %}
     <h1 class="display-4 text-center">{{ titulo_pagina }}</h1>
+    {% for i in chave %}
+        <p>{{ i.id }}</p>
+        <p>{{ i.nome }}</p>
+        <p>{{ i.slug }}</p>
+    {% endfor %}
     {% for materia in materias %}
         <h5>{{ materia.categoria }}</h5>
         <h2><a href=" {% url 'detalhe_materia' pk=materia.pk %}">{{ materia.titulo }}</a></h2>
@@ -9,6 +14,6 @@
         <blockquote>{{ materia.texto }}</blockquote>
         <p><strong>Autor: </strong>{{ materia.pessoa }}</p>
         <p><strong>Lançamento da publicação: </strong>{{ materia.data_criacao }}</p>
-        <hr class="style5">
+        <hr>
     {% endfor %}
 {% endblock content %}
